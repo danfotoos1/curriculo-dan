@@ -1,0 +1,138 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 263 70% 12%;
+    --foreground: 0 0% 100%;
+
+    --card: 263 60% 15%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 263 60% 15%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 320 100% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 263 70% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 263 50% 25%;
+    --muted-foreground: 240 40% 70%;
+
+    --accent: 320 100% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 263 40% 30%;
+    --input: 263 40% 30%;
+    --ring: 320 100% 58%;
+
+    --radius: 0.75rem;
+
+    /* CV specific tokens */
+    --cv-gradient-start: 263 70% 12%;
+    --cv-gradient-mid: 280 60% 20%;
+    --cv-gradient-end: 320 60% 40%;
+    
+    --cv-highlight: 320 100% 58%;
+    --cv-text-primary: 0 0% 100%;
+    --cv-text-secondary: 240 60% 75%;
+    --cv-text-muted: 240 40% 60%;
+    
+    --cv-skill-bar: 320 100% 58%;
+    --cv-skill-bg: 263 40% 25%;
+  }
+
+  .dark {
+    --background: 263 70% 12%;
+    --foreground: 0 0% 100%;
+
+    --card: 263 60% 15%;
+    --card-foreground: 0 0% 100%;
+
+    --popover: 263 60% 15%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 320 100% 58%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 263 70% 20%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 263 50% 25%;
+    --muted-foreground: 240 40% 70%;
+
+    --accent: 320 100% 58%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 263 40% 30%;
+    --input: 263 40% 30%;
+    --ring: 320 100% 58%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+  }
+
+  /* Versão sem cores para impressão */
+  .print-no-color {
+    background: white !important;
+  }
+
+  .print-no-color * {
+    background: white !important;
+    color: black !important;
+    border-color: #cccccc !important;
+    text-shadow: none !important;
+  }
+
+  .print-no-color a {
+    color: black !important;
+    text-decoration: underline !important;
+  }
+
+  .print-no-color .bg-cv-highlight,
+  .print-no-color .text-cv-highlight {
+    background: white !important;
+    color: black !important;
+  }
+
+  /* Exceções para barras de habilidades */
+  .print-no-color .bg-cv-skill-bg {
+    background: #e0e0e0 !important;
+  }
+
+  .print-no-color .bg-cv-skill-bar {
+    background: #333333 !important;
+  }
+  
+  /* Garantir visibilidade de todos os textos */
+  .print-no-color h1,
+  .print-no-color h2,
+  .print-no-color h3,
+  .print-no-color p,
+  .print-no-color span,
+  .print-no-color div {
+    color: black !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+  }
+}
