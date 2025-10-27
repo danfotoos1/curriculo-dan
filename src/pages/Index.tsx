@@ -5,6 +5,7 @@ import { CVExperience } from "@/components/CVExperience";
 import { CVEducation } from "@/components/CVEducation";
 import { CVSkills } from "@/components/CVSkills";
 import { CVInterests } from "@/components/CVInterests";
+import { Navigation } from "@/components/Navigation";
 import { toast } from "sonner";
 import html2pdf from "html2pdf.js";
 import { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType } from "docx";
@@ -242,6 +243,7 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-cv-gradient flex items-center justify-center p-3 sm:p-6 md:p-8">
+      <Navigation />
       <div className="w-full max-w-5xl">
         {/* Download Buttons */}
         <div className="flex flex-col sm:flex-row justify-center sm:justify-end gap-2 sm:gap-3 mb-4 sm:mb-6">
