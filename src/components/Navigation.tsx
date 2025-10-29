@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import { FileText, Image, Menu, X, Home } from "lucide-react";
+import { FileText, Image, Menu, X, Home, Minus } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 export const Navigation = () => {
@@ -84,6 +84,23 @@ export const Navigation = () => {
                 <div>
                   <div className="font-semibold">Galeria</div>
                   <div className="text-xs opacity-70">Portfolio futurístico</div>
+                </div>
+              </Button>
+            </Link>
+
+            <Link to="/minimal" onClick={toggleSidebar}>
+              <Button
+                variant="ghost"
+                className={`w-full justify-start text-left h-14 rounded-xl transition-all duration-300 ${
+                  location.pathname === "/minimal"
+                    ? "bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 text-white"
+                    : "text-purple-300 hover:text-purple-100 hover:bg-purple-500/10"
+                }`}
+              >
+                <Minus className="h-5 w-5 mr-3" />
+                <div>
+                  <div className="font-semibold">Minimal</div>
+                  <div className="text-xs opacity-70">Design essencial</div>
                 </div>
               </Button>
             </Link>
