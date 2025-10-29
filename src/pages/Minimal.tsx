@@ -86,7 +86,7 @@ const Minimal = () => {
     if (hidden) return null;
 
     return (
-      <div className="mb-3 break-inside-avoid rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:shadow-blue-400/20 hover:-translate-y-1">
+      <div className="mb-2 sm:mb-3 break-inside-avoid rounded-2xl sm:rounded-3xl overflow-hidden shadow-lg sm:shadow-2xl border border-white/10 bg-white/5 backdrop-blur-sm transition-all duration-300 hover:shadow-blue-400/20 hover:-translate-y-1">
         <div className="relative">
           {isVideoPath(src) ? (
             <video
@@ -96,6 +96,7 @@ const Minimal = () => {
               loop
               muted
               playsInline
+              preload="metadata"
               className="w-full h-auto"
               onError={handleError}
             />
@@ -105,6 +106,7 @@ const Minimal = () => {
               src={src}
               alt={`Foto ${n}`}
               loading="lazy"
+              decoding="async"
               className="w-full h-auto"
               onError={handleError}
             />
@@ -396,14 +398,14 @@ const Minimal = () => {
       </section>
 
       {/* Pinterest-style Feed (Videos + Fotos 1..19) */}
-      <section className="py-20 px-3 sm:px-6 md:px-10 bg-gradient-to-b from-blue-500 to-blue-400">
+      <section className="py-16 px-2 sm:px-4 md:px-8 bg-gradient-to-b from-blue-500 to-blue-400">
         <div className="w-full max-w-[1600px] mx-auto">
-          <div className="mb-8 text-center">
-            <h3 className="text-3xl sm:text-4xl font-bold text-white">Feed</h3>
-            <div className="w-20 h-1 bg-white/70 mx-auto mt-2" />
+          <div className="mb-6 sm:mb-8 text-center">
+            <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white">Feed</h3>
+            <div className="w-16 sm:w-20 h-1 bg-white/70 mx-auto mt-2" />
           </div>
 
-      <div className="columns-2 sm:columns-3 lg:columns-4 xl:columns-5 gap-3 [column-fill:_balance]">
+      <div className="columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 2xl:columns-6 gap-2 sm:gap-3 [column-fill:_balance]">
         {[...
           pinterestItems.flatMap((item) => ([
             { n: item.n, prefer: 'image' as const },
