@@ -125,16 +125,16 @@ const Minimal = () => {
       <section className="py-32 px-6 sm:px-12 md:px-24 bg-white relative overflow-hidden">
         <div className="max-w-6xl mx-auto">
           <div className={`mb-16 transition-all duration-1000 ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}`}>
-            <h1 className="text-6xl sm:text-7xl md:text-8xl font-bold tracking-tight mb-6 text-black animate-pulse">
-              MINIMAL
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-bold tracking-tight mb-6 text-black animate-pulse">
+              Bem-vindo ao meu portfólio
             </h1>
-            <div className="w-24 h-1 bg-black animate-fade-in"></div>
+            <div className="w-28 h-1 bg-black animate-fade-in"></div>
           </div>
-          
-          <p className={`text-lg sm:text-xl md:text-2xl max-w-2xl leading-relaxed text-gray-900 transition-all duration-1000 delay-300 mb-12 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
-            Design limpo, essencial e atemporal. 
-            Cada elemento serve um propósito, 
-            cada linha conta uma história.
+
+          <p className={`text-lg sm:text-xl md:text-2xl max-w-3xl leading-relaxed text-gray-900 transition-all duration-1000 delay-300 mb-12 ${isVisible ? 'opacity-100 translate-x-0' : 'opacity-0 -translate-x-10'}`}>
+            Sou Daniel Rodrigues, Designer Gráfico. Crio identidades visuais, artes para redes sociais,
+            edições de vídeo e peças publicitárias. Abaixo você encontra alguns trabalhos e referências.
+            Se curtir o estilo, vamos conversar.
           </p>
 
           {/* Video moved to bottom section */}
@@ -149,20 +149,16 @@ const Minimal = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
             <div className="transition-all duration-1000 hover:scale-105">
               <h2 className="text-5xl sm:text-6xl font-bold mb-12 tracking-tight text-black">
-                Sobre o Design
+                Sobre mim
               </h2>
               <div className="space-y-8 text-xl text-black font-light leading-relaxed">
                 <p>
-                  O design minimalista é sobre essência. É a arte de reduzir 
-                  até encontrar a verdade fundamental.
+                  Atuo com criação e direção de arte, focado em comunicar com clareza e impacto.
+                  Gosto de unir estética e funcionalidade para fortalecer marcas e projetos.
                 </p>
                 <p>
-                  Cada linha, cada espaço, cada elemento existe por uma razão. 
-                  Nada é acidental, tudo é intencional.
-                </p>
-                <p className="text-base text-gray-600 italic font-normal">
-                  "Perfeição é alcançada não quando não há mais nada a adicionar, 
-                  mas quando não há mais nada a subtrair." — Antoine de Saint-Exupéry
+                  Trabalho com identidade visual, social media, fotografia e edição de vídeos.
+                  Meu objetivo é transformar ideias em peças que geram resultado.
                 </p>
               </div>
             </div>
@@ -172,25 +168,25 @@ const Minimal = () => {
                 <div className="flex items-center gap-6 mb-6">
                   <div className="w-16 h-px bg-black"></div>
                   <span className="text-base font-bold tracking-wider uppercase text-black">
-                    Princípios
+                    Especialidades
                   </span>
                 </div>
                 <ul className="space-y-4 text-xl text-black font-medium">
                   <li className="flex items-center gap-4">
                     <span className="w-3 h-3 bg-black rounded-full"></span>
-                    Simplicidade
+                    Identidade Visual
                   </li>
                   <li className="flex items-center gap-4">
                     <span className="w-3 h-3 bg-black rounded-full"></span>
-                    Clareza
+                    Social Media (posts e campanhas)
                   </li>
                   <li className="flex items-center gap-4">
                     <span className="w-3 h-3 bg-black rounded-full"></span>
-                    Funcionalidade
+                    Edição de Vídeo
                   </li>
                   <li className="flex items-center gap-4">
                     <span className="w-3 h-3 bg-black rounded-full"></span>
-                    Elegância
+                    Fotografia e Tratamento de Imagem
                   </li>
                 </ul>
               </div>
@@ -199,13 +195,12 @@ const Minimal = () => {
                 <div className="flex items-center gap-6 mb-6">
                   <div className="w-16 h-px bg-black"></div>
                   <span className="text-base font-bold tracking-wider uppercase text-black">
-                    Processo
+                    Como trabalho
                   </span>
                 </div>
                 <p className="text-xl text-black font-light leading-relaxed">
-                  Buscar o equilíbrio entre forma e função, 
-                  criando experiências que são ao mesmo tempo 
-                  belas e utilitárias.
+                  Converso para entender a necessidade, estudo referências, crio propostas e ajusto
+                  com feedback até chegar no resultado ideal para o projeto.
                 </p>
               </div>
             </div>

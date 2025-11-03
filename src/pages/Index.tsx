@@ -25,9 +25,9 @@ const Index = () => {
     experiences: [
       {
         period: "Out/2021 –\nJul/2025",
-        role: "Coordenador Administrativo",
-        company: "Gerente Administrativo — Eshops (Empresa credenciada da Heineken)",
-        description: "Gestão administrativa e operacional da unidade, RH, administração, folha de ponto e escalas; coordenação de equipe e supervisão de processos internos, garantir cumprimento das metas e objetivos estabelecidos.",
+        role: "Coordenador Administrativo (Logística e Vendas)",
+        company: "Gerente Administrativo — Echope (Empresa credenciada da Heineken)",
+        description: "Gestão administrativa e operacional da unidade; logística; vendas e estratégia de vendas; RH, administração, folha de ponto e escalas; coordenação de equipe e supervisão de processos internos, garantindo o cumprimento de metas e objetivos estabelecidos.",
       },
       {
         period: "Jan/2017 –\nDez/2021",
