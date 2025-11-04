@@ -87,6 +87,23 @@ export const Navigation = () => {
                 </div>
               </Button>
             </Link>
+
+            <Link to="/performance" onClick={toggleSidebar}>
+              <Button
+                variant="ghost"
+                className={`w-full justify-start text-left h-14 rounded-xl transition-all duration-300 ${
+                  location.pathname === "/performance"
+                    ? "bg-gradient-to-r from-purple-500/20 to-pink-500/20 border border-purple-500/30 text-white"
+                    : "text-purple-300 hover:text-purple-100 hover:bg-purple-500/10"
+                }`}
+              >
+                <Minus className="h-5 w-5 mr-3" />
+                <div>
+                  <div className="font-semibold">Performance</div>
+                  <div className="text-xs opacity-70">Growth & mídia paga</div>
+                </div>
+              </Button>
+            </Link>
           </div>
 
           {/* Footer */}

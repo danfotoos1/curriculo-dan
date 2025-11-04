@@ -6,11 +6,13 @@ interface CVHeaderProps {
   email: string;
   linkedin: string;
   portfolio: string;
-  projects: string;
+  projects: string | string[];
   address: string;
 }
 
 export const CVHeader = ({ name, title, birthDate, phone, email, linkedin, portfolio, projects, address }: CVHeaderProps) => {
+  const projectsText = Array.isArray(projects) ? projects.join(' • ') : projects;
+  const isProjectsUrl = typeof projectsText === 'string' && /^(https?:)?\/\//i.test(projectsText);
   return (
     <div className="mb-4 sm:mb-6">
       <div className="text-center mb-3 sm:mb-4">
@@ -58,14 +60,18 @@ export const CVHeader = ({ name, title, birthDate, phone, email, linkedin, portf
         </p>
         <p className="break-words whitespace-normal">
           Projetos:{" "}
-          <a 
-            href={projects} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="text-cv-highlight hover:underline print:text-cv-text-primary break-all inline-block max-w-full"
-          >
-            {projects.replace('https://', '')}
-          </a>
+          {isProjectsUrl ? (
+            <a
+              href={projectsText}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-cv-highlight hover:underline print:text-cv-text-primary break-all inline-block max-w-full"
+            >
+              {projectsText.replace('https://', '')}
+            </a>
+          ) : (
+            <span>{projectsText}</span>
+          )}
         </p>
       </div>
     </div>

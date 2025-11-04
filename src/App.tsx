@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
 import Minimal from "./pages/Minimal";
 import NotFound from "./pages/NotFound";
+import Performance from "./pages/Performance";
 
 const queryClient = new QueryClient();
 
@@ -19,6 +20,7 @@ const App = () => (
           <Route path="/" element={<Minimal />} />
           <Route path="/curriculo" element={<Index />} />
           <Route path="/minimal" element={<Minimal />} />
+          <Route path="/performance" element={<Performance />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

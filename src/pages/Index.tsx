@@ -20,7 +20,13 @@ const Index = () => {
     email: "danielrodriguis@live.com",
     linkedin: "www.linkedin.com/in/danfotoos",
     portfolio: "https://danfotoos.46graus.com",
-    projects: "https://clipstudium.shop/",
+    projects: [
+      "Identidade visual completa",
+      "Posts e campanhas para redes sociais",
+      "Edição de vídeo para promoções",
+      "Website/landing page de portfólio",
+      "Materiais impressos (flyer, cartão, banner)"
+    ],
     address: "R. Ema Frederici Geraldeli, 790 - Jardim Rosolem, Hortolândia - SP, 13185-310",
     experiences: [
       {
@@ -162,11 +168,30 @@ const Index = () => {
                 text: `Portfólio: ${cvData.portfolio}`,
                 alignment: AlignmentType.CENTER,
               }),
-              new Paragraph({
-                text: `Projetos: ${cvData.projects}`,
-                alignment: AlignmentType.CENTER,
-                spacing: { after: 400 },
-              }),
+              ...(Array.isArray(cvData.projects)
+                ? [
+                    new Paragraph({
+                      text: "PROJETOS",
+                      heading: HeadingLevel.HEADING_2,
+                      spacing: { before: 200, after: 100 },
+                      alignment: AlignmentType.CENTER,
+                    }),
+                    ...cvData.projects.map((p) =>
+                      new Paragraph({
+                        text: `• ${p}`,
+                        alignment: AlignmentType.CENTER,
+                        spacing: { after: 100 },
+                      })
+                    ),
+                    new Paragraph({ spacing: { after: 300 } })
+                  ]
+                : [
+                    new Paragraph({
+                      text: `Projetos: ${cvData.projects}`,
+                      alignment: AlignmentType.CENTER,
+                      spacing: { after: 400 },
+                    })
+                  ]),
               new Paragraph({
                 text: "EXPERIÊNCIA",
                 heading: HeadingLevel.HEADING_2,
