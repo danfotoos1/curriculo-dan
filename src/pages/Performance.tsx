@@ -162,14 +162,6 @@ const Performance = () => {
           </div>
         </div>
       </section>
-
-      <section id="contato" className="py-20 px-6 sm:px-12 md:px-24 bg-gradient-to-b from-slate-950 to-black">
-        <div className="max-w-6xl mx-auto text-center">
-          <h2 className="text-4xl font-bold mb-4">Vamos rodar uma sprint de 14 dias?</h2>
-          <p className="text-slate-300 mb-8">Setup, 3 testes semanais e um painel simples para provar valor rápido.</p>
-          <a href="mailto:danielrodriguis@live.com" className="px-8 py-4 rounded-2xl border-2 border-blue-400/60 hover:border-blue-300 bg-blue-500/10 hover:bg-blue-500/20 transition-all font-semibold">Falar no e-mail</a>
-        </div>
-      </section>
     </div>
   );
 };
